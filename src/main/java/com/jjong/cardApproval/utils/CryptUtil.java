@@ -126,8 +126,4 @@ public class CryptUtil {
     }
 
 
-    public static void main(String[] args) {
-
-    }
-
 }
