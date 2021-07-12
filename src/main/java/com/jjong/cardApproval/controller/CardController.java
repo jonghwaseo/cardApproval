@@ -81,7 +81,7 @@ public class CardController {
     
             cardCancel = this.cardService.saveCancel(cardCancel);
     
-            reqCancelVo.setPayId(cardCancel.getCancelId());
+            reqCancelVo.setCancelId(cardCancel.getCancelId());
             reqCancelVo.setStrData(cardCancel.getInfMsg());
 
         }catch ( BizException e){

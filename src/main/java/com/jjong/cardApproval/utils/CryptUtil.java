@@ -126,4 +126,9 @@ public class CryptUtil {
     }
 
 
+    public static void main(String[] args) throws Exception{
+        String aaaa = CryptUtil.encryptAES256("1111222233334444|0912|03");
+        System.out.println(aaaa);
+    }
+
 }
