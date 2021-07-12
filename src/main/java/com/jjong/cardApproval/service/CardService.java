@@ -10,10 +10,9 @@ import com.jjong.cardApproval.repository.DupRepository;
 import com.jjong.cardApproval.utils.CardUtil;
 import com.jjong.cardApproval.utils.RandomUtil;
 import com.jjong.cardApproval.utils.StringUtil;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 
-@Slf4j
+
 public class CardService {
 
     private final CardRepository cardRepository;

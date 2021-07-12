@@ -15,6 +15,8 @@ import java.util.Base64;
 
 public class CryptUtil {
 
+    public static final String CRYPTKEY = "kakaoCardApproval";
+
 
     public static String encryptAES256(String msg) throws Exception {
 
@@ -34,7 +36,7 @@ public class CryptUtil {
 
         // 70000번 해시하여 256 bit 길이의 키를 만든다.
 
-        PBEKeySpec spec = new PBEKeySpec(Constants.CRYPTKEY.toCharArray(), saltBytes, 70000, 256);
+        PBEKeySpec spec = new PBEKeySpec(CRYPTKEY.toCharArray(), saltBytes, 70000, 256);
 
 
 
@@ -103,7 +105,7 @@ public class CryptUtil {
 
         SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
 
-        PBEKeySpec spec = new PBEKeySpec(Constants.CRYPTKEY.toCharArray(), saltBytes, 70000, 256);
+        PBEKeySpec spec = new PBEKeySpec(CRYPTKEY.toCharArray(), saltBytes, 70000, 256);
 
 
 
@@ -120,6 +122,11 @@ public class CryptUtil {
         byte[] decryptedTextBytes = cipher.doFinal(encryoptedTextBytes);
 
         return new String(decryptedTextBytes);
+
+    }
+
+
+    public static void main(String[] args) {
 
     }
 
